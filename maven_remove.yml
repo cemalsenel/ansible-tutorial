@@ -1,0 +1,6 @@
+- name: remove maven
+  hosts: all
+  become: yes
+  tasks:
+    - name: remove maven
+      yum: name=maven state=removed

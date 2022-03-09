@@ -1,0 +1,8 @@
+- name: Reboot Servers
+  hosts: all
+  become: true
+  become_method: sudo
+  tasks: 
+    - name: Reboot Servers
+      command: /sbin/reboot
+      ignore_errors: true

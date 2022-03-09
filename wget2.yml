@@ -1,0 +1,7 @@
+- name: install wget
+  hosts: all
+  become: true
+  become_method: sudo
+  tasks:
+    - name: install wget with yum
+      yum: name=wget state=absent

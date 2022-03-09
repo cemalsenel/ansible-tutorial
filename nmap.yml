@@ -1,0 +1,9 @@
+- name: install nmap
+  hosts: all
+  become: true
+  become_method: sudo
+  tasks:
+    - name: install nmap with yum
+      yum:
+        name: nmap
+        state: present

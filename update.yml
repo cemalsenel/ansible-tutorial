@@ -1,0 +1,8 @@
+- name: perform yum update
+  hosts: all
+  become: true
+  become_method: sudo
+  become_user: root
+  tasks:
+    - name: '*'
+      yum: state=latest

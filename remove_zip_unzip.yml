@@ -1,0 +1,8 @@
+- name: remove zip & unzip
+  hosts: all
+  become: yes
+  tasks:
+    - name: remove zip
+      yum: name=zip state=absent
+    - name: remove unzip
+      yum: name=unzip state=absent

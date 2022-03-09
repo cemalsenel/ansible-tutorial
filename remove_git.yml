@@ -1,0 +1,6 @@
+- name: remove git
+  hosts: all
+  become: yes
+  tasks:
+    - name: remove git
+      yum: name=zip state=absent
