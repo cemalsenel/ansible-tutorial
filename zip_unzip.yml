@@ -5,4 +5,4 @@
     - name: install zip
       yum: name=zip state=latest
     - name: install unzip
-      yum: name=unzip state=latest
+      yum: name=unzip state=present
