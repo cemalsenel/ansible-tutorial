@@ -1,0 +1,8 @@
+- name: Serial Keyword
+  hosts: all
+  serial: 1 # 1 machine runs at each batch
+  tasks:
+  - name: 1st Task
+    command: "echo 1"
+  - name: 2nd Task
+    command: "echo 2"
