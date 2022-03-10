@@ -1,9 +1,8 @@
 - name: Condition 5
   hosts: nodes
   vars:
-    tool: "Jenkins"
+    var: 25
   tasks:
     - debug:
-        msg: "{{ tool }} is my everything"
-      when: tool == "Jenkins" or 1 == 0
-    # when: tool == "Jenkins" and 1 == 1
+        msg: "{{ var }}"
+      when: var%5 == 0

@@ -1,9 +1,0 @@
-- name: Condition 7
-  hosts: nodes
-  vars:
-    var: 25
-  tasks:
-    - debug:
-        msg: "{{ var }}"
-      when: var is defined
-    # when: var1 is defined

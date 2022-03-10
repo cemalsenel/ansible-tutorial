@@ -1,5 +1,5 @@
 - name: File validation
-  hosts: nodes2
+  hosts: nodes
   tasks:
     - name: Create a file if it doesn't exist
       file:
