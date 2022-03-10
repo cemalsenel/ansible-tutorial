@@ -1,0 +1,14 @@
+- name: Create new users with loop
+  hosts: all
+  become_user: root
+  become_method: sudo
+  become: true
+  tasks:
+    - name: Create  new users
+      user:
+        name: '{{ item }}'
+        state: present
+      loop:
+        - kimi
+        - schumi
+        - verstappen

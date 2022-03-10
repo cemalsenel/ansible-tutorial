@@ -1,0 +1,14 @@
+- name: remove  users and uid with loop
+  hosts: nodes
+  become_user: root
+  become_method: sudo
+  become: true
+  tasks:
+    - name: remove users
+      user:
+        name: '{{ item.name }}'
+        state: absent # remove'u deger olarak almaz
+      loop:
+        - name: kimi
+        - name: schumi
+        - name: verstappen

@@ -1,0 +1,13 @@
+- name: Debug message 1
+  hosts: all
+  become: true
+  become_method: sudo
+  become_user: root
+  vars: 
+    dictionary:
+      user1: Jimmy
+      user2: Johnny
+      user3: Joe
+  tasks:
+  - name: Debug msg
+    debug: var=dictionary

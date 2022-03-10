@@ -1,0 +1,21 @@
+- name: Debug message 1
+  hosts: all
+  become: true
+  become_method: sudo
+  become_user: root
+  vars: 
+    users:
+      user1: 
+        name: Jimmy
+        phone: 1
+      user2: 
+        name: Johnny
+        phone: 2
+      user3: 
+        name: Joe
+        phone: 3
+  tasks:
+  - name: Debug msg
+    debug: 
+      msg: "{{ item.key }} --> ({{ item.value.name }}),phone: ({{ item.value.phone }})"
+    loop: "{{ lookup('dict', users)}}"

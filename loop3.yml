@@ -1,0 +1,8 @@
+- name: install package with loop
+  hosts: all
+  become: true
+  tasks:
+  - name: install packages
+    yum: 
+      name: ["vim", "git", "curl"] 
+      state: latest

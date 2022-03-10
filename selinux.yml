@@ -1,0 +1,14 @@
+- name: Enable$Disable Selinux
+  hosts: all
+  become: true
+  become_method: sudo
+  become_user: root
+  tasks:
+    - name: Enable Selinux
+      selinux:
+        policy: targeted
+        state: enforcing
+    - name: Disable Selinux
+      selinux: 
+        policy: targeted
+        state: disabled

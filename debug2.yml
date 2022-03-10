@@ -1,0 +1,12 @@
+- name: Debug message 1
+  hosts: all
+  become: true
+  become_method: sudo
+  become_user: root
+  tasks:
+  - name: Debug msg
+    debug:
+      msg: 
+      - "Hello World!"
+      - "Hello Jimmy!"
+      - "Hello World again!"
